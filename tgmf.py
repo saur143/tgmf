@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+from telethon.sessions import StringSession
 
 from urllib.parse import urlparse, parse_qs
 import re
@@ -11,9 +12,9 @@ import re
 api_id = 27417836
 api_hash = '0a8f28bc5d9ba95fb81687b4e59e458b'
 
-session_name = 'my_session'
+session_string = '1BVtsOHoBuyasj-5vyg11HGDpjRUNChOXSTPbkpPGTQ-NzK9r0T-NF48h3fFaEgQiNqjmflilUm-FJ4Ij0YV7ki85zY9MVUBQH797MhesKgMCdCNGXtaBVjG7qvanPCE9RX6rylH3GLwCiULCl_zkDCfwg9BjjwzUjvdnbrUVDH2h96wc1X6JZ61Cmv6tRxu7N7hgR0dvC433vP0yJ55iW5VdtjcxKSiZOhdusJZifq8ZE9nUfRsYoMphPGruUC8H538dVjhL0ew7tRC2WdV_pxRUWpJF-ExFJm5NE6BfhzokPlvDqFausmAFRV7v4XZuoiYgkxmXak5_b_QR4WWTT-o4CEgb33M='
 
-client = TelegramClient(session_name, api_id, api_hash)
+client = TelegramClient(StringSession(session_string), api_id, api_hash)
 
 # Replace the channel IDs below with the IDs of the channels you want to monitor
 channel_ids = ['homepaa', 'lallantopdealss', 'Flipkart_Shopping_Loots_Deals', 'INDLootDeals', 'indian_shopping_deals_loots']
