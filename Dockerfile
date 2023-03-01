@@ -1,4 +1,4 @@
-FROM python:3.9
+FROM python:3.10
 
 RUN apt-get update && apt-get install -y wget gnupg
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
@@ -14,4 +14,4 @@ WORKDIR /app
 
 COPY tgmf.py /app
 
-CMD ["python", "tgmf.py"]
+CMD ["python3", "tgmf.py"]
